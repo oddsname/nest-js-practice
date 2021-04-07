@@ -1,6 +1,6 @@
 import {BeforeInsert, Column, Entity, ObjectIdColumn, OneToMany} from "typeorm";
 import {File} from "./file.entity";
-import { hash } from "bcrypt"
+import { hash, compareSync } from "bcrypt"
 
 @Entity()
 export class User {
@@ -23,5 +23,9 @@ export class User {
     @BeforeInsert()
     async hashPassword() {
         this.password = await hash(this.password, 10);
+    }
+
+    checkPassword(password: string): boolean {
+        return compareSync(password, this.password)
     }
 }
