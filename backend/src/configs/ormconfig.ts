@@ -6,11 +6,12 @@ const ormConfig: TypeOrmModuleOptions = {
     "port": 27017,
     "username": "root",
     "password": "rootpassword",
-    "synchronize": true,
+    "synchronize": false,
     "database": "admin",
     "useNewUrlParser": true,
     "useUnifiedTopology": true,
-    "autoLoadEntities": true
+    entities: [__dirname + '/../entities/*.{js,ts}'],
+    // "autoLoadEntities": true
 }
 
 export default ormConfig;

@@ -1,7 +1,7 @@
 import {Column, Entity, ManyToOne, ObjectIdColumn, OneToMany} from "typeorm";
-import {User} from "./user.entity";
 import {FileToken} from "./file-token.enitity";
 import {FileComment} from "./file-comment.entity";
+import {User} from "./user.entity";
 
 
 export enum FileStatusEnum {
@@ -30,7 +30,7 @@ export class File {
     @Column({type: "datetime"})
     public createdAt: string
 
-    @ManyToOne(() => User, user => user.files)
+    @ManyToOne(() => User, (user: User) => user.files)
     public user: User
 
     @OneToMany(() => FileToken, fileToken => fileToken.file)

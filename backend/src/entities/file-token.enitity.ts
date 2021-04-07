@@ -19,7 +19,7 @@ export class FileToken {
     @ObjectIdColumn()
     public id;
 
-    @Column({type: "string"})
+    @Column({type: "string", unique: true})
     public token: string
 
     @Column({type: "string", enum: FileTokenTypeEnum})
