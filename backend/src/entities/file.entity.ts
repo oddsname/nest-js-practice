@@ -2,6 +2,7 @@ import {Column, Entity, ManyToOne, ObjectIdColumn, OneToMany} from "typeorm";
 import {FileToken} from "./file-token.enitity";
 import {FileComment} from "./file-comment.entity";
 import {User} from "./user.entity";
+import {ObjectId} from "mongodb";
 
 
 export enum FileStatusEnum {
@@ -13,7 +14,7 @@ export enum FileStatusEnum {
 export class File {
 
     @ObjectIdColumn()
-    public id;
+    public _id: ObjectId;
 
     @Column({type: "string"})
     public name: string

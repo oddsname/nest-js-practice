@@ -1,5 +1,6 @@
 import {Column, Entity, ManyToOne, ObjectIdColumn} from "typeorm";
 import {File} from "./file.entity";
+import {ObjectId} from "mongodb";
 
 
 export enum FileTokenStatusEnum {
@@ -17,7 +18,7 @@ export enum FileTokenTypeEnum {
 export class FileToken {
 
     @ObjectIdColumn()
-    public id;
+    public _id: ObjectId;
 
     @Column({type: "string", unique: true})
     public token: string

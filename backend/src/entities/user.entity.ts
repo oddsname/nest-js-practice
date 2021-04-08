@@ -1,4 +1,5 @@
 import {BeforeInsert, Column, Entity, ObjectIdColumn, OneToMany} from "typeorm";
+import {ObjectId} from "mongodb"
 import {File} from "./file.entity";
 import { hash, compareSync } from "bcrypt"
 
@@ -6,7 +7,7 @@ import { hash, compareSync } from "bcrypt"
 export class User {
 
     @ObjectIdColumn()
-    public id;
+    public _id: ObjectId;
 
     @Column({type: "string"})
     public name: string

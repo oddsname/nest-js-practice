@@ -1,12 +1,13 @@
 import {Column, Entity, ManyToOne, ObjectIdColumn} from "typeorm";
 import {File} from "./file.entity";
+import {ObjectId} from "mongodb";
 
 
 @Entity()
 export class FileComment {
 
     @ObjectIdColumn()
-    public id;
+    public _id: ObjectId;
 
     @Column({type: "text"})
     public text: string

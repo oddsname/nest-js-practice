@@ -7,7 +7,7 @@ import {message} from "./helpers/seeder.helper";
 @Injectable()
 export class UserSeederService {
 
-    private userEmail = 'test@mail.com'
+    private userEmail = 'test@mail.com';
 
     constructor(
         @InjectRepository(User)
@@ -16,7 +16,7 @@ export class UserSeederService {
     }
 
     public async seed(): Promise<void> {
-       await this.userRepository.deleteMany({})
+        await this.userRepository.deleteMany({})
 
         const user = new User();
 
