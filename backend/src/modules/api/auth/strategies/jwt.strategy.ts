@@ -23,7 +23,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         });
     }
 
-    public login(user: User)
+    public generateToken(user: User)
     {
         const payload = {id: user._id, email: user.email};
 
