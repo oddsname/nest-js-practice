@@ -1,5 +1,6 @@
 <template>
   <v-container>
+
       <v-slide-x-transition >
 
         <register-form
@@ -34,8 +35,8 @@ export default {
   },
 
   data: () => ({
-    isShowRegisterForm: true,
-    isShowLoginForm: false,
+    isShowRegisterForm: false,
+    isShowLoginForm: true,
   }),
   methods: {
     toggleForms() {

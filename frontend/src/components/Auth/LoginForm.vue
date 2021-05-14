@@ -30,7 +30,10 @@
                 Login
               </v-btn>
 
-              <h4 class="mt-7 font-weight-light cursor-pointer text-decoration-underline" @click="onRegisterClick">
+              <h4
+                  class="mt-7 font-weight-light cursor-pointer text-decoration-underline"
+                  @click="onRegisterClick"
+              >
                 Register
               </h4>
             </div>

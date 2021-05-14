@@ -2,7 +2,7 @@ import {Injectable} from "@nestjs/common";
 import {MongoRepository} from "typeorm";
 import {User} from "../../entities/user.entity";
 import {InjectRepository} from "@nestjs/typeorm";
-import {message} from "./helpers/seeder.helper";
+import {message} from "../../common/console";
 
 @Injectable()
 export class UserSeederService {

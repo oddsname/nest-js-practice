@@ -1,6 +1,6 @@
 import {TypeOrmModuleOptions} from "@nestjs/typeorm";
 
-const ormConfig: TypeOrmModuleOptions = {
+export const ormConfig: TypeOrmModuleOptions = {
     "type": "mongodb",
     "host": "localhost",
     "port": 27017,

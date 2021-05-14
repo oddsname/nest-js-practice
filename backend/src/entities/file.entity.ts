@@ -4,7 +4,6 @@ import {FileComment} from "./file-comment.entity";
 import {User} from "./user.entity";
 import {ObjectId} from "mongodb";
 
-
 export enum FileStatusEnum {
     CREATED = 'created',
     DELETED = 'deleted'

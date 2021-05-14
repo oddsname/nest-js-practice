@@ -1,7 +1,6 @@
 import {DynamicModule, Module} from '@nestjs/common';
-import {TypeOrmModule} from "@nestjs/typeorm";
 import {FileSystemService} from "./file-system.service";
-import {FOLDER} from "./file-system.inject-const";
+import {INJECT} from "./file-system.const";
 
 @Module({})
 export class FileSystemModule {
@@ -10,7 +9,7 @@ export class FileSystemModule {
             module: FileSystemModule,
             providers: [
                 {
-                    provide: FOLDER,
+                    provide: INJECT.FOLDER,
                     useValue: options.folder || ''
                 },
                 FileSystemService

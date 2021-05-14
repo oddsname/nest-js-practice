@@ -1,21 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import About from "../views/About.vue"
 import Auth from "@/views/Auth";
+import Dashboard from "@/views/Dashboard";
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: About,
+        name: 'Dashboard',
+        component: Dashboard
     },
     {
         path: '/auth',
@@ -30,4 +24,6 @@ const router = new VueRouter({
     routes
 })
 
-export default router
+export {
+    router
+}

@@ -5,8 +5,8 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-      </div>
+      <h3 class="px-4">Files</h3>
+      <h3 class="px-4">Reports</h3>
     </v-app-bar>
 
     <v-main>
@@ -16,13 +16,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+
   },
 
   data: () => ({
@@ -30,8 +29,3 @@ export default {
   }),
 };
 </script>
-<style>
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-</style>
